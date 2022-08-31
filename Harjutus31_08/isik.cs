@@ -25,7 +25,7 @@ namespace Harjutus31_08
         {
             this.nimi = nimi;
             this.synniAasta = synniAasta;
-            
+            this.sugu = sugu;
         }
         public void muuda_Nimi(string uusNimi)
         {

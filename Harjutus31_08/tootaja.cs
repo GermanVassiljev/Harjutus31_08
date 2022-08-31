@@ -11,17 +11,15 @@ namespace Harjutus31_08
         string asut;
         string amet;
         int tootasu;
-        double netopalk;
 
 
         public tootaja() { }
 
-        public tootaja(string nimi,int synniAasta, sugus sugu, string asut = "---", string amet = "---", int tootasu = 0, double netopalk = 0) : base(nimi, synniAasta, sugu)
+        public tootaja(string nimi,int synniAasta, sugus sugu, string asut = "---", string amet = "---", int tootasu = 0) : base(nimi, synniAasta, sugu)
         {
             this.asut = asut;
             this.amet = amet;
             this.tootasu = tootasu;
-            this.netopalk = netopalk;
         }
 
         public double arvutiSissetulek(double maksuvaba, double tulumaks)
@@ -34,9 +32,8 @@ namespace Harjutus31_08
             Console.WriteLine("Nimi: {0}", nimi);
             Console.WriteLine("Asut nimi: {0}", asut);
             Console.WriteLine("amet: {0}", amet);
-            Console.WriteLine("Brutopalk: {0}", tootasu);
-            Console.WriteLine("Netopalk& {0}", netopalk);
-            Console.WriteLine($"Vanus: {arvutaVanus}");
+            Console.WriteLine($"Netopalk& {arvutiSissetulek(500,20)}");
+            Console.WriteLine($"Vanus: {arvutaVanus()}");
             Console.WriteLine("Sugu: {0}", sugu);
         }
     }

@@ -24,7 +24,7 @@ namespace Harjutus31_08
             Console.WriteLine("Koolinimi: {0}", koolinimi);
             Console.WriteLine("Klaas: {0}", klaas);
             Console.WriteLine("Spetsialiseerumine: {0}",spetsialiseerumine);
-            Console.WriteLine($"Vanus: {arvutaVanus}");
+            Console.WriteLine($"Vanus: {arvutaVanus()}");
             Console.WriteLine("Sugu: {0}", sugu);
         }
     }

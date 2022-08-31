@@ -10,10 +10,10 @@ namespace Harjutus31_08
     public class Kutsekooliopilane : isik
     {
         string oppeasutus;
-        int erialakursus;
+        string erialakursus;
         bool toetus;
         public Kutsekooliopilane() { }
-        public Kutsekooliopilane(string nimi,int synniAasta,string oppeasutus = "---", int erialakursus = 0, bool toetus= true) :base(nimi, synniAasta)
+        public Kutsekooliopilane(string nimi,int synniAasta,sugus sugu,string oppeasutus = "---", string erialakursus = "---", bool toetus= true) :base(nimi, synniAasta, sugu)
         {
             this.oppeasutus = oppeasutus;
             this.erialakursus = erialakursus;
@@ -25,7 +25,7 @@ namespace Harjutus31_08
             Console.WriteLine("Koolinimi: {0}", oppeasutus);
             Console.WriteLine("Klaas: {0}", erialakursus);
             Console.WriteLine("toetus: {0}", toetus);
-            Console.WriteLine($"Vanus: {arvutaVanus}");
+            Console.WriteLine($"Vanus: {arvutaVanus()}");
             Console.WriteLine("Sugu: {0}", sugus.Isane);
         }
     }
