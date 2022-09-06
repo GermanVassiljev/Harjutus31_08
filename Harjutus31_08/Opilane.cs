@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace Harjutus31_08
         string klaas;
         string spetsialiseerumine;
         public Opilane() { }
-        public Opilane(string nimi,int synniAasta, sugus sugu, string koolinimi="---", string klaas="---", string spetsialiseerumine = "---") :base(nimi,synniAasta, sugu)
+        public Opilane(string nimi,int synniAasta, sugus sugu, string koolinimi="---", string klaas="---", string spetsialiseerumine = "---", double kaal = 0, double pikkus = 0) :base(nimi,synniAasta, sugu, kaal, pikkus)
         {
             this.koolinimi = koolinimi;
             this.klaas = klaas;
@@ -26,6 +26,7 @@ namespace Harjutus31_08
             Console.WriteLine("Spetsialiseerumine: {0}",spetsialiseerumine);
             Console.WriteLine($"Vanus: {arvutaVanus()}");
             Console.WriteLine("Sugu: {0}", sugu);
+            Console.WriteLine($"Kehamassiindeks:{KMI()}");
         }
     }
 }
