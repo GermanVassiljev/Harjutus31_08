@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ namespace Harjutus31_08
 
         public tootaja() { }
 
-        public tootaja(string nimi,int synniAasta, sugus sugu, string asut = "---", string amet = "---", int tootasu = 0) : base(nimi, synniAasta, sugu)
+        public tootaja(string nimi,int synniAasta, sugus sugu, string asut = "---", string amet = "---", int tootasu = 0, double kaal = 0, double pikkus = 0) : base(nimi, synniAasta, sugu, kaal, pikkus)
         {
             this.asut = asut;
             this.amet = amet;
@@ -32,9 +32,10 @@ namespace Harjutus31_08
             Console.WriteLine("Nimi: {0}", nimi);
             Console.WriteLine("Asut nimi: {0}", asut);
             Console.WriteLine("amet: {0}", amet);
-            Console.WriteLine($"Netopalk& {arvutiSissetulek(500,20)}");
+            Console.WriteLine($"Netopalk: {arvutiSissetulek(500,20)}");
             Console.WriteLine($"Vanus: {arvutaVanus()}");
             Console.WriteLine("Sugu: {0}", sugu);
+            Console.WriteLine($"Kehamassiindeks:{KMI()}");
         }
     }
 }
